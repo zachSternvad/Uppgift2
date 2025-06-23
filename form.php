@@ -70,6 +70,13 @@
         </form>
     </div>
     
+    <?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+        // Hämta värderna och kontrollera så att dom ej är tomma
+        $name = !empty($_POST["usename"]) ? $_POST["username"] : "Inget namn angett";
+    }
+    ?>
 </body>
 
 </html>
